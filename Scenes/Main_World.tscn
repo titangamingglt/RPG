@@ -1,7 +1,46 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprite/Background.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/water.png" type="Texture" id=3]
+
+[sub_resource type="TileSet" id=1]
+0/name = "water.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 48, 48 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27 ]
+0/autotile/icon_coordinate = Vector2( 1, 1 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
 
 [node name="Main_World" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 0.509843, 0.326761 )
+texture = ExtResource( 2 )
+centered = false
+region_rect = Rect2( 0, 0, 1856, 960 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 262150, 0, 0, 262151, 0, 1, 262152, 0, 2, 327686, 0, 65536, 327687, 0, 65537, 327688, 0, 65537, 327689, 0, 1, 327690, 0, 1, 327691, 0, 1, 327692, 0, 1, 327693, 0, 1, 327694, 0, 1, 327695, 0, 1, 327696, 0, 1, 327697, 0, 1, 327698, 0, 2, 393222, 0, 65536, 393223, 0, 65537, 393224, 0, 65537, 393225, 0, 131073, 393226, 0, 131073, 393227, 0, 131073, 393228, 0, 131073, 393229, 0, 65537, 393230, 0, 65537, 393231, 0, 65537, 393232, 0, 65537, 393233, 0, 65537, 393234, 0, 65538, 458758, 0, 131072, 458759, 0, 131073, 458760, 0, 131074, 458765, 0, 131072, 458766, 0, 131073, 458767, 0, 131073, 458768, 0, 65537, 458769, 0, 65537, 458770, 0, 65538, 524304, 0, 131072, 524305, 0, 65537, 524306, 0, 65538, 589841, 0, 65536, 589842, 0, 65538, 655377, 0, 65536, 655378, 0, 65538, 720912, 0, 0, 720913, 0, 65537, 720914, 0, 131074, 786447, 0, 65537, 786448, 0, 65537, 786449, 0, 131074 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
