@@ -1,0 +1,17 @@
+DID,NID,Dialog
+1,1,<start>
+1,2,"<speaker>Kang Crugger</speaker>
+<dialog>Hey Traveller!! I see u want to play this awesome game to experience an awesome journey!</dialog>"
+1,3,<end>
+1,4,"<speaker>kang Crugger</speaker>
+<dialog> Enjoy Then </dialog>"
+1,5,"<speaker>Kang Crugger</speaker>
+<dialog>Before u proceed , i want to ask you a question.</dialog>
+"
+1,6,"<speaker>Kang Crugger</speaker>
+<dialog>Then Fuk off!1 Never ever try to enter this game if u r not a simp!! Only a true simp can enter into this forest!!!</dialog>"
+1,7,"<speaker>Kang Crugger</speaker>
+<dialog>Thats Great!! only a True simp can enter into this forest!!</dialog>"
+1,8,"<speaker>Kang Crugger</speaker>
+<dialog>Are You a Simp?</dialog>
+<choiceJSON>{""Yes"": 0, ""No"" : 1}</choiceJSON>"

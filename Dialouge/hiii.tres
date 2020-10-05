@@ -1,0 +1,111 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_EditorStory/EXP_EditorStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Story_editor"
+names = {
+"Opening": 1
+}
+story = {
+1: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "PrototypeDialoge",
+"name": "Opening",
+"nodes": {
+1: {
+"graph_offset": Vector2( -740, 100 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( -680, 280 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Hey Traveller!! I see u want to play this awesome game to experience an awesome journey!</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 600, 280 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 600, 500 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>kang Crugger</speaker>
+<dialog> Enjoy Then </dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( -780, 520 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Before u proceed , i want to ask you a question.</dialog>
+",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 260, 80 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Then Fuk off!1 Never ever try to enter this game if u r not a simp!! Only a true simp can enter into this forest!!!</dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 140, 500 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Thats Great!! only a True simp can enter into this forest!!</dialog>",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( -140, 300 ),
+"links": {
+0: 7,
+1: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 2,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Are You a Simp?</dialog>
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>",
+"type": "line"
+}
+}
+}
+}
+available_dids = [ 2, 3 ]
+groups = [  ]
