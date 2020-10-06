@@ -36,6 +36,7 @@ size = 7
 font_data = ExtResource( 2 )
 
 [node name="Dialoge" type="Node"]
+pause_mode = 2
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_vertical_guides_": [ 86.9045 ]

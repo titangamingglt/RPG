@@ -13,11 +13,23 @@ _global_script_class_icons={
 
 }
 
+[PluginSettings]
+
+gdinv/ItemJsonPaths={
+
+}
+gdinv/LoadOnReady=true
+
 [application]
 
 config/name="Rpg"
 run/main_scene="res://Scenes/Main_World.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+DialogGlobal="*res://Scripts/Dialog_Global.gd"
+GlobalQuest="*res://Scripts/Global_Quest.gd"
 
 [display]
 
@@ -64,6 +76,11 @@ Yes={
 No={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":66,"unicode":0,"echo":false,"script":null)
+ ]
+}
+interaction={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
  ]
 }
 

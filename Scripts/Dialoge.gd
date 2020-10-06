@@ -6,21 +6,24 @@ onready var _Body_LBL= $Control/Body/main_body/Body
 onready var _Body_AnimationPlayer =$Control/Body/main_body/Body/AnimationPlayer
 onready var _Speaker_LBL=$Control/Body/Speaker/Label
 onready var _Option_List = $Control/Body/Option
+onready var _Dialog_file = preload("res://Dialouge/bake.tres")
+onready var _Dialog_name ="k"
 
 var _did = 0
 var _nid = 0
-var _final_nid = 0
+var _final_nid = 4
 var _Story_Reader
 var option =false
-
+var chosen_option = ""
+signal choice
 # Virtual Methods
 
 func _ready():
 	var Story_Reader_Class = load("res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd")
 	_Story_Reader = Story_Reader_Class.new()
 	
-	var story = load("res://Dialouge/bake.tres")
-	_Story_Reader.read(story)
+#	var story = _Dialog_file
+#	_Story_Reader.read(story)
 	
 #	_load_textures()
 	
@@ -32,7 +35,7 @@ func _ready():
 	_Dialog_Box.visible=false
 	_SpaceBar_Icon.visible=false
 #	_clear_options()
-	play_dialog("Opening")
+	DialogGlobal.connect("request_dialog",self,"choose_dialog")
 
 
 func _input(event):
@@ -41,8 +44,11 @@ func _input(event):
 	if option:
 		if event.is_action_pressed("Yes"):
 			_on_Option_clicked(0)
+			chosen_option ="Yes"
 		elif event.is_action_pressed("No"):
 			_on_Option_clicked(1)
+			chosen_option ="No"
+		
 # Callback Methods
 #
 
@@ -97,6 +103,8 @@ func _get_next_node(slot : int = 0):
 	
 	if _nid == _final_nid:
 		_Dialog_Box.visible = false
+		_which_option_chosen(_did,_nid)
+		get_tree().paused=false
 		
 
 
@@ -144,6 +152,7 @@ func _is_waiting():
 
 
 func _play_node():
+	get_tree().paused=true
 	var text = _Story_Reader.get_text(_did, _nid)
 #	text = _inject_variables(text)
 	var speaker = _get_tagged_text("speaker", text)
@@ -164,7 +173,7 @@ func _play_node():
 	_Speaker_LBL.text = speaker
 	_Body_LBL.text = dialog
 	_Body_AnimationPlayer.play("text")
-
+	_request_info()
 
 func _populate_choices(JSONtext : String):
 	var choices : Dictionary = parse_json(JSONtext)
@@ -185,3 +194,19 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 #	_SelectChoice_Icon.visible = true
 		_Option_List.visible = true
 	pass
+
+func choose_dialog(file_name,dialog_name):
+	_Dialog_file = load(file_name)
+	_Dialog_name = dialog_name
+	var story = _Dialog_file
+	if story != null:
+		_Story_Reader.read(story)
+		play_dialog(_Dialog_name)
+
+func _request_info():
+	DialogGlobal.did = _did
+	DialogGlobal.nid = _nid
+	DialogGlobal.choice= chosen_option
+	DialogGlobal._requested_info()
+func _which_option_chosen(did, nid):
+	emit_signal("choice", did, nid,chosen_option)
