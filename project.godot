@@ -30,6 +30,7 @@ config/icon="res://icon.png"
 
 DialogGlobal="*res://Scripts/Dialog_Global.gd"
 GlobalQuest="*res://Scripts/Global_Quest.gd"
+GlobalBattle="*res://Scripts/Global_battle.gd"
 
 [display]
 
@@ -81,6 +82,11 @@ No={
 interaction={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+inventory={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777218,"unicode":0,"echo":false,"script":null)
  ]
 }
 

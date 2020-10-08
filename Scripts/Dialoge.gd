@@ -6,6 +6,7 @@ onready var _Body_LBL= $Control/Body/main_body/Body
 onready var _Body_AnimationPlayer =$Control/Body/main_body/Body/AnimationPlayer
 onready var _Speaker_LBL=$Control/Body/Speaker/Label
 onready var _Option_List = $Control/Body/Option
+onready var _Character_Texture = $Control/Body/Char_texture
 onready var _Dialog_file = preload("res://Dialouge/bake.tres")
 onready var _Dialog_name ="k"
 
@@ -15,6 +16,7 @@ var _final_nid = 4
 var _Story_Reader
 var option =false
 var chosen_option = ""
+var _texture_library = {}
 signal choice
 # Virtual Methods
 
@@ -22,10 +24,8 @@ func _ready():
 	var Story_Reader_Class = load("res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd")
 	_Story_Reader = Story_Reader_Class.new()
 	
-#	var story = _Dialog_file
-#	_Story_Reader.read(story)
 	
-#	_load_textures()
+	
 	
 #	_Dialog_Box.visible = false
 #	_SpaceBar_Icon.visible = false
@@ -73,6 +73,7 @@ func _on_Option_clicked(slot : int):
 # Public Methods
 
 func play_dialog(record_name : String):
+	_load_textures()
 	_did = _Story_Reader.get_did_via_record_name(record_name)
 	_nid = _Story_Reader.get_nid_via_exact_text(_did, "<start>")
 	_final_nid = _Story_Reader.get_nid_via_exact_text(_did, "<end>")
@@ -93,8 +94,8 @@ func play_dialog(record_name : String):
 
 
 func _display_image(key : String):
-#	_Character_Texture.texture = _texture_library[key]
-#	_Character_Texture.visible = true
+	_Character_Texture.texture = _texture_library[key]
+	_Character_Texture.visible = true
 	pass
 
 
@@ -140,16 +141,15 @@ func _is_waiting():
 	return _SpaceBar_Icon.visible
 
 
-#func _load_textures():
-#	var did = _Story_Reader.get_did_via_record_name("Opening")
-#	var json_text = _Story_Reader.get_text(did, 1)
-#	var raw_texture_library : Dictionary = parse_json(json_text)
-#
-#	for key in raw_texture_library:
-#		var texture_path = raw_texture_library[key]
-#		var loaded_texture = load(texture_path)
-#		_texture_library[key] = loaded_texture
-
+func _load_textures():
+	var did = _Story_Reader.get_did_via_record_name("Texture_library")
+	var json_text = _Story_Reader.get_text(did, 1)
+	var raw_texture_library : Dictionary = parse_json(json_text)
+	for key in raw_texture_library:
+		var texture_path = raw_texture_library[key]
+		var loaded_texture = load(texture_path)
+		_texture_library[key] = loaded_texture
+	print(_texture_library)
 
 func _play_node():
 	get_tree().paused=true
@@ -167,9 +167,9 @@ func _play_node():
 #		option=false
 #		_Option_List.get_node("Yes").visible =false
 #		_Option_List.get_node("No").visible =false
-#	if "<image>" in text:
-#		var library_key = _get_tagged_text("image", text)
-#		_display_image(library_key)
+	if "<image>" in text:
+		var library_key = _get_tagged_text("image", text)
+		_display_image(library_key)
 	_Speaker_LBL.text = speaker
 	_Body_LBL.text = dialog
 	_Body_AnimationPlayer.play("text")
@@ -202,7 +202,7 @@ func choose_dialog(file_name,dialog_name):
 	if story != null:
 		_Story_Reader.read(story)
 		play_dialog(_Dialog_name)
-
+		
 func _request_info():
 	DialogGlobal.did = _did
 	DialogGlobal.nid = _nid

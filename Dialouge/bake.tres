@@ -19,7 +19,8 @@ story = {
 0: 5
 },
 "text": "<speaker>Kang Crugger</speaker>
-<dialog>Hey Traveller!! I see u want to play this awesome game to experience an awesome journey!</dialog>"
+<dialog>Hey Traveller!! I see u want to play this awesome game to experience an awesome journey!</dialog>
+<image>kang</image>"
 },
 3: {
 "links": {
@@ -32,7 +33,8 @@ story = {
 0: 3
 },
 "text": "<speaker>kang Crugger</speaker>
-<dialog> Enjoy Then </dialog>"
+<dialog> Enjoy Then </dialog>
+<image>kang</image>"
 },
 5: {
 "links": {
@@ -40,6 +42,7 @@ story = {
 },
 "text": "<speaker>Kang Crugger</speaker>
 <dialog>Before u proceed , i want to ask you a question.</dialog>
+<image>kang</image>
 "
 },
 6: {
@@ -47,14 +50,16 @@ story = {
 0: 3
 },
 "text": "<speaker>Kang Crugger</speaker>
-<dialog>Then Fuk off!1 Never ever try to enter this game if u r not a simp!! Only a true simp can enter into this forest!!!</dialog>"
+<dialog>Then Fuk off!1 Never ever try to enter this game if u r not a simp!! Only a true simp can enter into this forest!!!</dialog>
+<image>kang</image>"
 },
 7: {
 "links": {
 0: 4
 },
 "text": "<speaker>Kang Crugger</speaker>
-<dialog>Thats Great!! only a True simp can enter into this forest!!</dialog>"
+<dialog>Thats Great!! only a True simp can enter into this forest!!</dialog>
+<image>kang</image>"
 },
 8: {
 "links": {
@@ -63,7 +68,8 @@ story = {
 },
 "text": "<speaker>Kang Crugger</speaker>
 <dialog>Are You a Simp?</dialog>
-<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>"
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>
+<image>kang</image>"
 }
 }
 },
@@ -80,7 +86,8 @@ story = {
 0: 3
 },
 "text": "<speaker>Simponi</speaker>
-<dialog> Hi there !!</dialog>"
+<dialog> Hi there !!</dialog>
+<image>Simponi</image>"
 },
 3: {
 "links": {
@@ -89,35 +96,40 @@ story = {
 },
 "text": "<speaker>Simponi</speaker>
 <dialog>I have never seen you before!! Are u a foreginer?</dialog>
-<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>"
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>
+<image>Simponi</image>"
 },
 4: {
 "links": {
 0: 6
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Oh I see!!!Hope You will enjoy your visit to this forest!</dialog>"
+<dialog>Oh I see!!!Hope You will enjoy your visit to this forest!</dialog>
+<image>Simponi</image>"
 },
 5: {
 "links": {
 0: 7
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Thats weird... I have never seen you before.....</dialog>"
+<dialog>Thats weird... I have never seen you before.....</dialog>
+<image>Simponi</image>"
 },
 6: {
 "links": {
 0: 8
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Btw before you explore this forest can u help me with something?</dialog>"
+<dialog>Btw before you explore this forest can u help me with something?</dialog>
+<image>Simponi</image>"
 },
 7: {
 "links": {
 0: 8
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Anyway .. Dont know if it is proper or not.. I want to ask you a favour</dialog>"
+<dialog>Anyway .. Dont know if it is proper or not.. I want to ask you a favour</dialog>
+<image>Simponi</image>"
 },
 8: {
 "links": {
@@ -126,21 +138,24 @@ story = {
 },
 "text": "<speaker>Simponi</speaker>
 <dialog>Can you find my Necklace?</dialog>
-<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>"
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>
+<image>Simponi</image>"
 },
 9: {
 "links": {
 0: 11
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Thank You!</dialog>"
+<dialog>Thank You!</dialog>
+<image>Simponi</image>"
 },
 10: {
 "links": {
 0: 11
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Ok! If you change your mind !!! Come again we will have a same conversation!!</dialog>"
+<dialog>Ok! If you change your mind !!! Come again we will have a same conversation!!</dialog>
+<image>Simponi</image>"
 },
 11: {
 "links": {
@@ -165,42 +180,48 @@ story = {
 },
 "text": "<speaker>Simponi</speaker>
 <dialog>Did u find my necklace?</dialog>
-<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>"
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>
+<image>Simponi</image>"
 },
 3: {
 "links": {
 0: 4
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Thank you For your work i want to tell you a secret on how to proceed any further</dialog>"
+<dialog>Thank you For your work i want to tell you a secret on how to proceed any further</dialog>
+<image>Simponi</image>"
 },
 4: {
 "links": {
 0: 5
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Oh Wait</dialog>"
+<dialog>Oh Wait</dialog>
+<image>Simponi</image>"
 },
 5: {
 "links": {
 0: 6
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>.......</dialog>"
+<dialog>.......</dialog>
+<image>Simponi</image>"
 },
 6: {
 "links": {
 0: 7
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Sorry!! I totaly forgot that this is just a prototype game. </dialog>"
+<dialog>Sorry!! I totaly forgot that this is just a prototype game. </dialog>
+<image>Simponi</image>"
 },
 7: {
 "links": {
 0: 8
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Come again sometime later when our dev finish more!!</dialog>"
+<dialog>Come again sometime later when our dev finish more!!</dialog>
+<image>Simponi</image>"
 },
 8: {
 "links": {
@@ -213,7 +234,8 @@ story = {
 0: 4
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Ha Ha ha ! U r a  naughty boy!!Thank you for your work.i want to tell you a secret on how to proceed any further</dialog>"
+<dialog>Ha Ha ha ! U r a  naughty boy!!Thank you for your work.i want to tell you a secret on how to proceed any further</dialog>
+<image>Simponi</image>"
 }
 }
 },
@@ -232,21 +254,24 @@ story = {
 },
 "text": "<speaker>Simponi</speaker>
 <dialog>did u found my neclace</dialog>
-<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>"
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>
+<image>Simponi</image>"
 },
 3: {
 "links": {
 0: 5
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Dont lie in this forest. It will have some Consequences!! </dialog>"
+<dialog>Dont lie in this forest. It will have some Consequences!! </dialog>
+<image>Simponi</image>"
 },
 4: {
 "links": {
 0: 5
 },
 "text": "<speaker>Simponi</speaker>
-<dialog>Comeback When you find it!!</dialog>"
+<dialog>Comeback When you find it!!</dialog>
+<image>Simponi</image>"
 },
 5: {
 "links": {
@@ -255,11 +280,25 @@ story = {
 "text": "<end>"
 }
 }
+},
+5: {
+"nodes": {
+1: {
+"links": {
+
+},
+"text": "{
+\"kang\" : \"res://Sprite/protrait/kang.png\",
+\"Simponi\" : \"res://Sprite/protrait/simponi.png\"
+}"
+}
+}
 }
 }
 names = {
 "NPC_After_Quest": 3,
 "NPC_Before_Quest": 2,
 "NPC_Quest_Not_Complete": 4,
-"Opening": 1
+"Opening": 1,
+"Texture_library": 5
 }

@@ -6,7 +6,10 @@ const MAX_SPEED =100
 const friction = 10
 var input_strenght= Vector2.ZERO
 onready var animate = $Animated_sprite
+onready var dia_bub = $Dia_bubble
+onready var dia_bub_anim =$dia_buble_aniamtion
 func _ready():
+	dia_bub.visible=false
 	pass
 # warning-ignore:unused_argument
 func _physics_process(delta):
@@ -38,5 +41,13 @@ func animation():
 
 
 func _on_Area2D_area_entered(area):
-	pass
-		
+	if area.is_in_group("NPC"):
+		dia_bub.visible=true
+		dia_bub_anim.play("open")
+
+
+
+func _on_Area2D_area_exited(area):
+	if area.is_in_group("NPC"):
+		dia_bub_anim.play("close")
+	

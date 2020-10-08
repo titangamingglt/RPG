@@ -15,7 +15,7 @@ func pick_from_slot():
 	item_stat= item.item_description
 	item=null
 	pass
-	
+
 func put_into_slot(new_item):
 	item=new_item
 	item.position= Vector2(0,0)

@@ -3,15 +3,17 @@ extends Node2D
 const SlotClass = preload("res://Scripts/Slot.gd")
 onready var inventory_slots =$TabContainer/Attack/GridContainer
 var holding_item = null
+var opened =false
 onready var stat_bar =$Stat
 var item_stat = {
 	"name" : "",
 	"attack" : 0
 }
 func _ready():
+	visible =false
 	
 	for inv_slot in inventory_slots.get_children():
-		inv_slot.connect("gui_input", self, "slot_gui_input", [inv_slot])
+		inv_slot.connect("gui_input", self, "slot_gui_input",[inv_slot])
 
 func slot_gui_input(event: InputEvent, slot: SlotClass):
 	if event is InputEventMouseButton:
@@ -22,9 +24,7 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 					holding_item = null
 				else: # Swap holding item with item in slot
 					var temp_item = slot.item
-#					item_stat.attack =slot.item.item_description.attac
 					slot.pick_from_slot()
-					
 					temp_item.global_position = event.global_position
 					slot.put_into_slot(holding_item)
 					holding_item = temp_item
@@ -38,6 +38,13 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 func _input(event):
 	if holding_item:
 		holding_item.global_position = get_global_mouse_position()
+	if event.is_action_pressed("inventory") and !holding_item:
+		if opened:
+			visible=false
+			opened =false
+		else :
+			opened = true
+			visible=true
 func stat_display():
 	print(item_stat)
 	stat_bar.get_node("name").text=str(item_stat.name)
