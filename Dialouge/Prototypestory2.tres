@@ -1,0 +1,411 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_EditorStory/EXP_EditorStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Story_editor"
+names = {
+"NPC_After_Quest": 3,
+"NPC_Before_Quest": 2,
+"NPC_Quest_Not_Complete": 4,
+"Opening": 1
+}
+story = {
+1: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "PrototypeDialoge",
+"name": "Opening",
+"nodes": {
+1: {
+"graph_offset": Vector2( -740, 100 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( -680, 280 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Hey Traveller!! I see u want to play this awesome game to experience an awesome journey!</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 600, 280 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 600, 500 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>kang Crugger</speaker>
+<dialog> Enjoy Then </dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( -780, 520 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Before u proceed , i want to ask you a question.</dialog>
+",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 260, 80 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Then Fuk off!1 Never ever try to enter this game if u r not a simp!! Only a true simp can enter into this forest!!!</dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 140, 500 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Thats Great!! only a True simp can enter into this forest!!</dialog>",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( -140, 300 ),
+"links": {
+0: 7,
+1: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 2,
+"text": "<speaker>Kang Crugger</speaker>
+<dialog>Are You a Simp?</dialog>
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>",
+"type": "line"
+}
+}
+},
+2: {
+"available_nid": [  ],
+"groups": [ "NPC" ],
+"human_readable_description": "Convo if one accept quest or not",
+"name": "NPC_Before_Quest",
+"nodes": {
+1: {
+"graph_offset": Vector2( 0, -500 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 0, -300 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog> Hi there !!</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 0, -100 ),
+"links": {
+0: 4,
+1: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 2,
+"text": "<speaker>Simponi</speaker>
+<dialog>I have never seen you before!! Are u a foreginer?</dialog>
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 500, -100 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Oh I see!!!Hope You will enjoy your visit to this forest!</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 500, 100 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Thats weird... I have never seen you before.....</dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 1000, -100 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Btw before you explore this forest can u help me with something?</dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 1000, 100 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Anyway .. Dont know if it is proper or not.. I want to ask you a favour</dialog>",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 1500, -100 ),
+"links": {
+0: 9,
+1: 10
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 2,
+"text": "<speaker>Simponi</speaker>
+<dialog>Can you find my Necklace?</dialog>
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( 2000, -100 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Thank You!</dialog>",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( 2000, 100 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Ok! If you change your mind !!! Come again we will have a same conversation!!</dialog>",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( 2600, 0 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+3: {
+"available_nid": [  ],
+"groups": [ "NPC" ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "NPC_After_Quest",
+"nodes": {
+1: {
+"graph_offset": Vector2( -800, -500 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( -800, -300 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>kiiiii my neclace</dialog>
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( -800, -100 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>For your work i want to tell you a secret on how to proceed any further</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( -300, -100 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Oh Wait</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 200, -100 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>.......</dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 702, -97 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Sorry!! I totaly forgot that this is just a prototype game. </dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 1200, -100 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Come again sometime later when our dev finish more!!</dialog>",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 1800, -300 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+4: {
+"available_nid": [  ],
+"groups": [ "NPC" ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "NPC_Quest_Not_Complete",
+"nodes": {
+1: {
+"graph_offset": Vector2( 100, -500 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 100, -300 ),
+"links": {
+0: 3,
+1: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 2,
+"text": "<speaker>Simponi</speaker>
+<dialog>did u found my neclace</dialog>
+<choiceJSON>{\"Yes\": 0, \"No\" : 1}</choiceJSON>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 700, -400 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Dont lie in this forest. It will have some Consequences!! </dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 700, -200 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Comeback When you find it!!</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 1300, -300 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+},
+5: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"nodes": {
+
+}
+}
+}
+available_dids = [  ]
+groups = [ "NPC" ]
