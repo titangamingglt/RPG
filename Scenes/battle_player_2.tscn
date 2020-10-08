@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Sprite/protrait/kang.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/player_one.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=3]
 
@@ -26,7 +26,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-health = 96
+health = 98
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 32.0
@@ -37,7 +37,7 @@ margin_right = 32.0
 margin_bottom = 12.0
 rect_min_size = Vector2( 32, 12 )
 custom_fonts/font = SubResource( 1 )
-text = "Player "
+text = "Player2"
 align = 1
 valign = 1
 

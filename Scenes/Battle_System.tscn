@@ -40,24 +40,47 @@ texture = ExtResource( 2 )
 centered = false
 
 [node name="selection_arrow" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 6 )
 
 [node name="Enemy" type="Node2D" parent="."]
 script = ExtResource( 4 )
+enemy_count = 2
 
 [node name="enemy_one" type="Position2D" parent="Enemy"]
 position = Vector2( 56.0183, 66.2253 )
 script = ExtResource( 5 )
 selected = true
 
+[node name="Selected_Icon" type="Sprite" parent="Enemy/enemy_one"]
+position = Vector2( 0, -53.4253 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 6 )
+
 [node name="enemy_two" type="Position2D" parent="Enemy"]
 position = Vector2( 152.018, 66.2253 )
 script = ExtResource( 5 )
 
+[node name="Selected_Icon" type="Sprite" parent="Enemy/enemy_two"]
+position = Vector2( 0, -53.4253 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}
+
 [node name="enemy_three" type="Position2D" parent="Enemy"]
 position = Vector2( 253.518, 66.2253 )
 script = ExtResource( 5 )
+
+[node name="Selected_Icon" type="Sprite" parent="Enemy/enemy_three"]
+position = Vector2( 0, -53.4253 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Attack_Screen" type="NinePatchRect" parent="."]
 anchor_top = 1.0
@@ -101,6 +124,7 @@ margin_left = 70.0
 margin_top = 4.0
 margin_right = 314.0
 margin_bottom = 56.0
+size_flags_horizontal = 3
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -4,7 +4,9 @@ onready var player = preload("res://Scenes/battle_player.tscn")
 export(int,1,3) var max_party=3
 
 func _ready():
-	for i in max_party:
+	for i in GlobalBattle.party_number:
+		player = load(GlobalBattle.player_type[i])
+		print(player)
 		var plyr = player.instance()
 		add_child(plyr)
 		plyr.get_node("player_image").connect("pressed",self,"_selection")
