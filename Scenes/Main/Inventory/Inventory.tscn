@@ -1,0 +1,541 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Main/Inventory/Slot.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/Main/Inventory/Inventory.gd" type="Script" id=3]
+[ext_resource path="res://Sprite/Main/UI/Inventory/inventory_bodio.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 100, 99 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 100, 99 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 7
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 4
+font_data = ExtResource( 2 )
+
+[node name="Inventory" type="Node2D"]
+position = Vector2( 171.785, 86.8364 )
+script = ExtResource( 3 )
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -74.0
+margin_top = -50.5
+margin_right = 74.0
+margin_bottom = 50.5
+custom_fonts/font = SubResource( 1 )
+tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attack" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 26.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Attack"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -58.5
+margin_top = -39.5
+margin_right = 58.5
+margin_bottom = 39.5
+custom_constants/vseparation = 5
+columns = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot1" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_right = 16.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot2" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot3" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 40.0
+margin_right = 56.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot4" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 60.0
+margin_right = 76.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot5" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 80.0
+margin_right = 96.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot6" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 100.0
+margin_right = 116.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot7" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_top = 21.0
+margin_right = 16.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot8" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 20.0
+margin_top = 21.0
+margin_right = 36.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot9" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 40.0
+margin_top = 21.0
+margin_right = 56.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot10" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 60.0
+margin_top = 21.0
+margin_right = 76.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot11" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 80.0
+margin_top = 21.0
+margin_right = 96.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot12" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 100.0
+margin_top = 21.0
+margin_right = 116.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot13" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_top = 42.0
+margin_right = 16.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot14" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 20.0
+margin_top = 42.0
+margin_right = 36.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot15" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 40.0
+margin_top = 42.0
+margin_right = 56.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot16" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 60.0
+margin_top = 42.0
+margin_right = 76.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot17" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 80.0
+margin_top = 42.0
+margin_right = 96.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot18" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 100.0
+margin_top = 42.0
+margin_right = 116.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot19" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_top = 63.0
+margin_right = 16.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot20" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 20.0
+margin_top = 63.0
+margin_right = 36.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot21" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 40.0
+margin_top = 63.0
+margin_right = 56.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot22" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 60.0
+margin_top = 63.0
+margin_right = 76.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot23" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 80.0
+margin_top = 63.0
+margin_right = 96.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Slot24" type="Panel" parent="TabContainer/Attack/GridContainer"]
+margin_left = 100.0
+margin_top = 63.0
+margin_right = 116.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Defence" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 26.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_constants/top_margin = 5
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Defence"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -58.5
+margin_top = -39.5
+margin_right = 58.5
+margin_bottom = 39.5
+custom_constants/vseparation = 5
+columns = 6
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Slot1" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_right = 16.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot2" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot3" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 40.0
+margin_right = 56.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot4" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 60.0
+margin_right = 76.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot5" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 80.0
+margin_right = 96.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot6" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 100.0
+margin_right = 116.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot7" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_top = 21.0
+margin_right = 16.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot8" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 20.0
+margin_top = 21.0
+margin_right = 36.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot9" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 40.0
+margin_top = 21.0
+margin_right = 56.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot10" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 60.0
+margin_top = 21.0
+margin_right = 76.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot11" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 80.0
+margin_top = 21.0
+margin_right = 96.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot12" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 100.0
+margin_top = 21.0
+margin_right = 116.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot13" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_top = 42.0
+margin_right = 16.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot14" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 20.0
+margin_top = 42.0
+margin_right = 36.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot15" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 40.0
+margin_top = 42.0
+margin_right = 56.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot16" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 60.0
+margin_top = 42.0
+margin_right = 76.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot17" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 80.0
+margin_top = 42.0
+margin_right = 96.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot18" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 100.0
+margin_top = 42.0
+margin_right = 116.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot19" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_top = 63.0
+margin_right = 16.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot20" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 20.0
+margin_top = 63.0
+margin_right = 36.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot21" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 40.0
+margin_top = 63.0
+margin_right = 56.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot22" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 60.0
+margin_top = 63.0
+margin_right = 76.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot23" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 80.0
+margin_top = 63.0
+margin_right = 96.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Slot24" type="Panel" parent="TabContainer/Defence/GridContainer"]
+margin_left = 100.0
+margin_top = 63.0
+margin_right = 116.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 16, 16 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Stat" type="Panel" parent="."]
+margin_left = -119.0
+margin_top = -33.0
+margin_right = -79.0
+margin_bottom = 49.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Stat"]
+margin_left = 3.0
+margin_top = 2.12823
+margin_right = 39.0
+margin_bottom = 16.1282
+custom_fonts/font = SubResource( 4 )
+text = "STAT"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="Stat"]
+margin_left = 1.50169
+margin_top = 16.3621
+margin_right = 37.5017
+margin_bottom = 30.3621
+custom_fonts/font = SubResource( 4 )
+text = "Stats"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="attack" type="Label" parent="Stat"]
+margin_left = 2.94387
+margin_top = 36.102
+margin_right = 42.9439
+margin_bottom = 50.102
+custom_fonts/font = SubResource( 4 )
+text = "attack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Desc" type="Label" parent="Stat"]
+margin_left = 3.0
+margin_top = 53.0
+margin_right = 36.0
+margin_bottom = 77.0
+custom_fonts/font = SubResource( 5 )
+text = "Your Primary sowrd"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -23,14 +23,14 @@ gdinv/LoadOnReady=true
 [application]
 
 config/name="Rpg"
-run/main_scene="res://Scenes/Main_World.tscn"
+run/main_scene="res://Scenes/Level_One/Main_World.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-DialogGlobal="*res://Scripts/Dialog_Global.gd"
-GlobalQuest="*res://Scripts/Global_Quest.gd"
-GlobalBattle="*res://Scripts/Global_battle.gd"
+DialogGlobal="*res://Scripts/Main/Global_Autoload/Dialog_Global.gd"
+GlobalQuest="*res://Scripts/Main/Global_Autoload/Global_Quest.gd"
+GlobalBattle="*res://Scripts/Main/Global_Autoload/Global_battle.gd"
 
 [display]
 
