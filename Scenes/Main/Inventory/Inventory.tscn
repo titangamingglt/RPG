@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Main/Inventory/Slot.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Main/Inventory/Inventory.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Main/Inventory/GridContainer.gd" type="Script" id=4]
 [ext_resource path="res://Sprite/Main/UI/Inventory/inventory_bodio.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -63,6 +64,7 @@ margin_right = 58.5
 margin_bottom = 39.5
 custom_constants/vseparation = 5
 columns = 6
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

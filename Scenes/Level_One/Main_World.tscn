@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Scenes/Main/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprite/Level_one/Tile_Set/Background.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Scenes/Level_One/Item/Necklace.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Main/Inventory/Inventory.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Main/Battel_system/Battle_int.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Main/Inventory/Item.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Main/Inventory/Item_two.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -714,8 +716,24 @@ position = Vector2( 428.522, -73.0537 )
 position = Vector2( 341.466, 195.749 )
 
 [node name="Battle_int" parent="." instance=ExtResource( 11 )]
-position = Vector2( -131.522, -24.0416 )
+position = Vector2( 142.783, -89.2025 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/change_scene = SubResource( 53 )
+
+[node name="Item" parent="." instance=ExtResource( 12 )]
+position = Vector2( 292.919, 128.105 )
+
+[node name="Item2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 441.908, 89.797 )
+
+[node name="Item3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 291.978, 16.7216 )
+
+[node name="Item_two" parent="." instance=ExtResource( 13 )]
+position = Vector2( 277.085, -98.7042 )
+
+[node name="Item_two2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 397.195, -177.192 )
 [connection signal="area_entered" from="Battle_int" to="." method="_on_Battle_int_area_entered"]
+[connection signal="add_to_inventory" from="Item" to="YSort/UI_Layout/Inventory" method="_on_Item_add_to_inventory"]

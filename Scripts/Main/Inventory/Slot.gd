@@ -2,12 +2,13 @@ extends Panel
 var item_scn = preload("res://Scenes/Main/Inventory/Item.tscn")
 var item= null
 var item_stat ={}
-func _ready():
-	randomize()
-	if randi() %2 == 0:
-		item = item_scn.instance()
-		add_child(item)
-	pass
+
+#func _ready():
+#	randomize()
+#	if randi() %2 == 0:
+#		item = item_scn.instance()
+#		add_child(item)
+#	pass
 func pick_from_slot():
 	remove_child(item)
 	var inventory = find_parent("Inventory")
@@ -23,3 +24,4 @@ func put_into_slot(new_item):
 	inventory.remove_child(item)
 	add_child(item)
 	pass
+

@@ -31,6 +31,7 @@ config/icon="res://icon.png"
 DialogGlobal="*res://Scripts/Main/Global_Autoload/Dialog_Global.gd"
 GlobalQuest="*res://Scripts/Main/Global_Autoload/Global_Quest.gd"
 GlobalBattle="*res://Scripts/Main/Global_Autoload/Global_battle.gd"
+GlobalInventory="*res://Scripts/Main/Global_Autoload/Global_Inventory.gd"
 
 [display]
 
