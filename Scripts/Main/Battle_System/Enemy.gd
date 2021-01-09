@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var enemy= preload("res://Scenes/Level_One/Battle_enemy/Battle_enemy.tscn")
-export(int,0,2) var  enemy_count = 1
+export(int,0,2) var  enemy_count = 2
 var enemy_container=[]
 var enemy_selection =0
 var selected_enemy = null

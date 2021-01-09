@@ -48,7 +48,7 @@ func _input(event):
 		elif event.is_action_pressed("No"):
 			_on_Option_clicked(1)
 			chosen_option ="No"
-		
+
 # Callback Methods
 #
 

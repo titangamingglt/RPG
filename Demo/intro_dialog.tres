@@ -1,0 +1,109 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_EditorStory/EXP_EditorStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Story_editor"
+names = {
+"Intro": 1
+}
+story = {
+1: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "New Dialog - Enter Human Readable Description.",
+"name": "Intro",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>
+",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 40, 260 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Dont lie in this forest. It will have some Consequences!! </dialog>
+<image>Simponi</image>\"",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 40, 440 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>But the men living Inside are not!!<\\dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 40, 600 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Once Upon a Time Alarion was prosperous, Wealthy and people were happy!!<\\dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 500, 600 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>But the Goverment of Alarion became Corrupt, Evil!!<\\dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 520, 440 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Simponi</speaker>
+<dialog>Now People are suffering! Magic was gone from the forest long ago<\\dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 520, 280 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<dialog>Now You are our only hope top save Alarion and its people!!<\\dialog>",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 520, 100 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+}
+}
+}
+}
+available_dids = [  ]
+groups = [  ]

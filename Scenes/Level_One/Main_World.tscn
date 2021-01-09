@@ -9,7 +9,7 @@
 [ext_resource path="res://Scripts/Level_One/Main_World.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Level_One/NPC/NPC_simpian.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Level_One/Item/Necklace.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Main/Inventory/Inventory.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Main/Inventory/Master_Option.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Main/Battel_system/Battle_int.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Main/Inventory/Item.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Main/Inventory/Item_two.tscn" type="PackedScene" id=13]
@@ -700,7 +700,7 @@ tile_data = PoolIntArray( -1376233, 1, 0, -1376232, 1, 0, -1376231, 1, 0, -13762
 
 [node name="Dialoge" parent="YSort/UI_Layout" instance=ExtResource( 6 )]
 
-[node name="Inventory" parent="YSort/UI_Layout" instance=ExtResource( 10 )]
+[node name="Master_Option" parent="YSort/UI_Layout" instance=ExtResource( 10 )]
 visible = false
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
@@ -736,4 +736,3 @@ position = Vector2( 277.085, -98.7042 )
 [node name="Item_two2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 397.195, -177.192 )
 [connection signal="area_entered" from="Battle_int" to="." method="_on_Battle_int_area_entered"]
-[connection signal="add_to_inventory" from="Item" to="YSort/UI_Layout/Inventory" method="_on_Item_add_to_inventory"]

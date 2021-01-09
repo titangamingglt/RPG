@@ -1,18 +1,17 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Sprite/Main/UI/Dialog/Dialoge_Background.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/Main/UI/Battle_System/atkon.png" type="Texture" id=1]
+[ext_resource path="res://Sprite/Main/UI/Battle_System/atkof.png" type="Texture" id=2]
 [ext_resource path="res://Sprite/Main/UI/Battle_System/20305395141540882611-512.png" type="Texture" id=3]
-[ext_resource path="res://Sprite/Main/UI/Battle_System/k98_kn.jpg" type="Texture" id=4]
+[ext_resource path="res://Sprite/Main/UI/Battle_System/forest Copy.png" type="Texture" id=4]
 [ext_resource path="res://Sound/Battle 2.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Scripts/Main/Battle_System/Enemy.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/Main/Battle_System/enemy_one.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/Main/Battle_System/party.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/Main/Battle_System/Battle_System.gd" type="Script" id=9]
-
-[sub_resource type="DynamicFont" id=1]
-size = 7
-font_data = ExtResource( 1 )
+[ext_resource path="res://Sprite/Main/UI/Battle_System/btlmsgbg1.png" type="Texture" id=10]
+[ext_resource path="res://Sprite/Main/UI/Battle_System/fight.png" type="Texture" id=11]
+[ext_resource path="res://Sprite/Main/UI/Battle_System/Escape.png" type="Texture" id=12]
 
 [sub_resource type="Animation" id=2]
 resource_name = "enter"
@@ -35,7 +34,8 @@ script = ExtResource( 9 )
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
 [node name="Battle_background" type="Sprite" parent="."]
-scale = Vector2( 0.4, 0.3 )
+position = Vector2( -11.6253, 0 )
+scale = Vector2( 0.161346, 0.144314 )
 texture = ExtResource( 4 )
 centered = false
 
@@ -45,8 +45,9 @@ scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 3 )
 
 [node name="Enemy" type="Node2D" parent="."]
+position = Vector2( 10, 20 )
 script = ExtResource( 6 )
-enemy_count = 2
+enemy_count = 0
 
 [node name="enemy_one" type="Position2D" parent="Enemy"]
 position = Vector2( 56.0183, 66.2253 )
@@ -82,12 +83,19 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="Button_bar" type="Sprite" parent="."]
+position = Vector2( 150, 127 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 10 )
+
 [node name="Attack_Screen" type="NinePatchRect" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -60.0
-texture = ExtResource( 2 )
+margin_left = 1.0
+margin_top = -59.0
+margin_right = 1.0
+margin_bottom = -47.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -99,41 +107,54 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Attack_Screen/Interactive_Button"]
-margin_right = 64.0
-margin_bottom = 60.0
+[node name="VBoxContainer" type="HBoxContainer" parent="Attack_Screen/Interactive_Button"]
+margin_right = 316.0
+margin_bottom = 12.0
 size_flags_vertical = 3
 
-[node name="attack" type="Button" parent="Attack_Screen/Interactive_Button/VBoxContainer"]
-margin_right = 64.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 64, 20 )
-custom_fonts/font = SubResource( 1 )
-text = "attack"
+[node name="attack" type="TextureButton" parent="Attack_Screen/Interactive_Button/VBoxContainer"]
+margin_right = 156.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 156, 12 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+expand = true
 
-[node name="attack2" type="Button" parent="Attack_Screen/Interactive_Button/VBoxContainer"]
-margin_top = 24.0
-margin_right = 64.0
-margin_bottom = 44.0
-rect_min_size = Vector2( 64, 20 )
-custom_fonts/font = SubResource( 1 )
-text = "item"
+[node name="attack2" type="TextureButton" parent="Attack_Screen/Interactive_Button/VBoxContainer"]
+margin_left = 160.0
+margin_right = 316.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 156, 12 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+expand = true
 
 [node name="party" type="HBoxContainer" parent="Attack_Screen"]
-margin_left = 70.0
-margin_top = 4.0
-margin_right = 314.0
-margin_bottom = 56.0
+margin_left = 9.0
+margin_top = 18.0
+margin_right = 253.0
+margin_bottom = 70.0
 size_flags_horizontal = 3
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-max_party = 1
+max_party = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/enter = SubResource( 2 )
 
 [node name="Enter" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
+[node name="Fight" type="Sprite" parent="."]
+position = Vector2( 81.3936, 127.127 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="Fight2" type="Sprite" parent="."]
+position = Vector2( 249.394, 127.127 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 12 )
 [connection signal="pressed" from="Attack_Screen/Interactive_Button/VBoxContainer/attack" to="Enemy" method="_on_attack_pressed"]
+[connection signal="pressed" from="Attack_Screen/Interactive_Button/VBoxContainer/attack2" to="Enemy" method="_on_attack_pressed"]

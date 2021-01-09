@@ -288,8 +288,8 @@ story = {
 
 },
 "text": "{
-\"kang\" : \"res://Sprite/protrait/kang.png\",
-\"Simponi\" : \"res://Sprite/protrait/simponi.png\"
+\"kang\" : \"res://Sprite/Main/UI/Dialog/protrait/kang.png\",
+\"Simponi\" : \"res://Sprite/Main/UI/Dialog/protrait/simponi.png\"
 }"
 }
 }

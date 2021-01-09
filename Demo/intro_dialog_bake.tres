@@ -1,0 +1,71 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_BakedStory/EXP_BakedStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Baked_Story"
+story = {
+1: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>
+"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Simponi</speaker>
+<dialog>Dont lie in this forest. It will have some Consequences!! </dialog>
+<image>Simponi</image>\""
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Simponi</speaker>
+<dialog>But the men living Inside are not!!<\\dialog>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>Simponi</speaker>
+<dialog>Once Upon a Time Alarion was prosperous, Wealthy and people were happy!!<\\dialog>"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "<speaker>Simponi</speaker>
+<dialog>But the Goverment of Alarion became Corrupt, Evil!!<\\dialog>"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "<speaker>Simponi</speaker>
+<dialog>Now People are suffering! Magic was gone from the forest long ago<\\dialog>"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "<dialog>Now You are our only hope top save Alarion and its people!!<\\dialog>"
+},
+8: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+}
+}
+names = {
+"Intro": 1
+}

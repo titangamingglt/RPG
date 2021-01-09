@@ -41,15 +41,17 @@ margin_right = 74.0
 margin_bottom = 50.5
 custom_fonts/font = SubResource( 1 )
 tab_align = 0
+tabs_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Attack" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 26.0
+margin_top = 8.0
 margin_right = -4.0
 margin_bottom = -4.0
 
@@ -276,11 +278,10 @@ custom_styles/panel = SubResource( 2 )
 script = ExtResource( 1 )
 
 [node name="Defence" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 26.0
+margin_top = 8.0
 margin_right = -4.0
 margin_bottom = -4.0
 custom_constants/top_margin = 5

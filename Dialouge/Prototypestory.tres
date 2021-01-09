@@ -450,8 +450,8 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "{
-\"kang\" : \"res://Sprite/protrait/kang.png\",
-\"Simponi\" : \"res://Sprite/protrait/simponi.png\"
+\"kang\" : \"res://Sprite/Main/UI/Dialog/protrait/kang.png\",
+\"Simponi\" : \"res://Sprite/Main/UI/Dialog/protrait/simponi.png\"
 }",
 "type": "line"
 }

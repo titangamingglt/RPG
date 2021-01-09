@@ -1,0 +1,221 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Sprite/Main/UI/main_menu/base.png" type="Texture" id=1]
+[ext_resource path="res://Sprite/Main/UI/main_menu/Layer 4.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/Main/UI/main_menu/button/exit.png" type="Texture" id=3]
+[ext_resource path="res://Sprite/Main/UI/main_menu/Layer 1.png" type="Texture" id=4]
+[ext_resource path="res://Sprite/Main/UI/main_menu/button/load.png" type="Texture" id=5]
+[ext_resource path="res://Sprite/Main/UI/main_menu/button/new_game.png" type="Texture" id=6]
+[ext_resource path="res://Sprite/Main/UI/main_menu/button/option.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/Main/Other/Main_menu.gd" type="Script" id=8]
+[ext_resource path="res://Sprite/Main/UI/main_menu/Layer 3.png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "background"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sky:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -192, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Head:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 236, -1 ), Vector2( -1, -1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "menu_button"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("new_game:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 216 ), Vector2( 0, 156 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("option:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 83, 223 ), Vector2( 83, 156 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("load:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 167, 213 ), Vector2( 167, 156 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("exit:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 251, 206 ), Vector2( 251, 156 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("title:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Main_menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sky" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -192.0
+margin_right = -192.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Head" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 236.0
+margin_top = -1.0
+margin_right = 268.0
+margin_bottom = 18.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="new_game" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = 26.0
+margin_right = 70.0
+margin_bottom = 50.0
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="option" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 83.0
+margin_top = 26.0
+margin_right = 153.0
+margin_bottom = 50.0
+icon = ExtResource( 7 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="load" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 167.0
+margin_top = 26.0
+margin_right = 237.0
+margin_bottom = 50.0
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 251.0
+margin_top = 26.0
+margin_right = 321.0
+margin_bottom = 50.0
+icon = ExtResource( 3 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.523
+margin_top = -28.409
+margin_right = 17.4773
+margin_bottom = 11.591
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/background = SubResource( 1 )
+anims/menu_button = SubResource( 2 )
+[connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

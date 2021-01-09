@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends Node2D
 export var health = 100 setget set_hp
 onready var health_text = $VBoxContainer/Player_health
 onready var player_selected_text = $VBoxContainer/Player_selected
@@ -20,3 +20,4 @@ func set_hp(damage):
 func _on_player_image_pressed():
 	selected= true
 	GlobalBattle.player_damage = player_damage
+	print("selected")

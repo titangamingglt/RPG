@@ -12,7 +12,6 @@ func _add_item(item_scene):
 			i.item.get_node("number").visible=true
 			break
 		elif i.get_child_count() !=0:
-			print(i.item.id)
 			if i.item.id == itm.id:
 				i.item.number+=1
 				break
